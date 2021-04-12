@@ -1,0 +1,35 @@
+
+
+/* student sign up form */
+.contact-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.contact-heading h3{
+    color: #ff0000;
+    text-transform: capitalize;
+}
+
+.contact-rule{
+    border-top: 0.1rem solid #ff0000;
+    width: 30%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+button{
+    background-color: #ff0000 !important;
+    /* padding: 0 !important; */
+    border: none !important;
+}
+
+.sign-in-link {
+    color: #fff !important;
+}
+.sign-in-link:hover {
+    color: #fff !important;
+}

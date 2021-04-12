@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// css import
+import "./App.css";
+
+import Navbar from "./components/NavbarComp";
+import Footer from "./components/Footer";
+
+// page imports
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import WhyUs from "./pages/WhyUs";
+import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
+import SignUp from "./pages/SignUp";
+import Error from "./pages/Error";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar></Navbar>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/services">
+            <Services />
+          </Route>
+          <Route exact path="/whyus">
+            <WhyUs />
+          </Route>
+          <Route exact path="/testimonials">
+            <Testimonials />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/signup">
+            <SignUp />
+          </Route>
+          <Route exact path="*">
+            <Error />
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </Router>
+    </>
   );
 }
 

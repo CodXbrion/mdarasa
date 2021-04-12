@@ -1,0 +1,15 @@
+.navbar{
+    color: red;
+}
+
+img {
+    height: 4.5rem;
+    width: 4rem;
+}
+
+a{
+    color: #000 !important;
+}
+a:hover{
+    color: #ff0000 !important;
+}
